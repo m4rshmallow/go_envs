@@ -8,7 +8,7 @@
 
    func main() {
        // by default load .env file
-       envs.Init()
+       go_envs.Init()
        fmt.Println(os.Getenv("SERVER_PORT"))
    }
   ```
@@ -18,7 +18,7 @@
 
 
   func main() {
-      envs.Init(".env", ".some_another_env")
+      go_envs.Init(".env", ".some_another_env")
       fmt.Println(os.Getenv("SERVER_PORT"))
   }
   ```
@@ -31,7 +31,7 @@
 
 
    func main() {
-       fmt.Println(envs.EnvMap.Get("SERVER_PORT"))
+       fmt.Println(go_envs.EnvMap.Get("SERVER_PORT"))
        fmt.Println(os.Getenv("SERVER_PORT"))
    }
   ```
