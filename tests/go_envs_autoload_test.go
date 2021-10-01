@@ -8,7 +8,7 @@ import (
 )
 
 func TestAutoloadEnv(t *testing.T) {
-	if len(go_envs.EnvMap) != 3 {
+	if len(go_envs.Map) != 3 {
 		t.Error("Autoload doesn't work")
 		return
 	}

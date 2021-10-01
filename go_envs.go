@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	EnvMap    = Env{}
+	Map       = Env{}
 	f         *os.File
 	e         error
 	envRegExp = regexp.MustCompile("(.+)=(.+)")
@@ -43,7 +43,7 @@ func storeEnv(str string) (key, value string) {
 	key = match[1]
 	value = strings.TrimSpace(match[2])
 
-	EnvMap.set(key, value)
+	Map.set(key, value)
 
 	return key, value
 }
