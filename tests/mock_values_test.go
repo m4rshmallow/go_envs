@@ -1,4 +1,4 @@
-package envs_test
+package go_envs_tests
 
 var shouldBe = map[string]string{
 	"ENV_1": "123",

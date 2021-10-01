@@ -1,7 +1,7 @@
 package autoload
 
-import "envs"
+import "github.com/m4rshmallow/go_envs"
 
 func init() {
-	envs.Init()
+	go_envs.Init()
 }

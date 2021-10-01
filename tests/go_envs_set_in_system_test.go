@@ -1,13 +1,14 @@
-package envs_test
+package go_envs_tests
 
 import (
-	"envs"
 	"os"
 	"testing"
+
+	"github.com/m4rshmallow/go_envs"
 )
 
 func TestEnvSetInSystem(t *testing.T) {
-	envs.Init()
+	go_envs.Init()
 	for k, v := range shouldBe {
 		osEnv := os.Getenv(k)
 		if osEnv != v {
