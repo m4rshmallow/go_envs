@@ -1,0 +1,12 @@
+name: "Pull request"
+on:
+  pull_request:
+    types: [opened, reopened, synchronized]
+    branches:
+      - master
+
+jobs:
+  tests:
+    name: "Testing"
+    run: |
+      go test ./...
