@@ -1,9 +1,9 @@
-# goenvs
+# go_envs
 
 ## Usage
 
 - ```go
-   import "envs"
+   import "github.com/m4rshmallow/go_envs"
 
 
    func main() {
@@ -14,7 +14,7 @@
   ```
 
 - ```go
-  import "envs"
+  import "github.com/m4rshmallow/go_envs"
 
 
   func main() {
@@ -25,7 +25,7 @@
 
 - ```go
    import (
-       _ "envs/autoload"
+       _ "github.com/m4rshmallow/go_envs/autoload"
        "fmt"
    )
 

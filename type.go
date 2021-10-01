@@ -1,4 +1,4 @@
-package envs
+package go_envs
 
 import (
 	"fmt"
