@@ -10,8 +10,8 @@ func TestMultifilesEnv(t *testing.T) {
 	expectedEnvs := 6
 	go_envs.Init(".env", ".env_extra")
 
-	if len(go_envs.EnvMap) != expectedEnvs {
-		t.Errorf("Not enough envs was set up, expected = %d; got = %d\n", expectedEnvs, len(go_envs.EnvMap))
+	if len(go_envs.Map) != expectedEnvs {
+		t.Errorf("Not enough envs was set up, expected = %d; got = %d\n", expectedEnvs, len(go_envs.Map))
 		return
 	}
 }
