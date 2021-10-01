@@ -1,4 +1,4 @@
-name: gogo_envs
+name: go_envs
 
 on:
   pull_request:
