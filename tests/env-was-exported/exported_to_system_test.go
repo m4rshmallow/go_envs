@@ -1,4 +1,4 @@
-package go_envs_tests
+package test_exported
 
 import (
 	"os"
@@ -8,8 +8,9 @@ import (
 )
 
 func TestEnvSetInSystem(t *testing.T) {
-	go_envs.Init()
-	for k, v := range shouldBe {
+	go_envs.Init("../.env")
+	
+	for k, v := range go_envs.MockMap {
 		osEnv := os.Getenv(k)
 		if osEnv != v {
 			t.Errorf("os.env.%s is invalid; expected = %s; got = %s\n", k, v, osEnv)

@@ -6,6 +6,6 @@ import (
 	"github.com/m4rshmallow/go_envs"
 )
 
-func TestSkipEmpty(t *testing.T) {
-	go_envs.Init(".env_empty")
+func TestBadFile(t *testing.T) {
+	go_envs.Init(".env_doesn't_exits")
 }

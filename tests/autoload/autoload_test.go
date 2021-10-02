@@ -1,4 +1,4 @@
-package go_envs_tests
+package test_autoload
 
 import (
 	"testing"
