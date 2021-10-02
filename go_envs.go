@@ -13,7 +13,7 @@ var (
 	Map       = Env{}
 	f         *os.File
 	e         error
-	envRegExp = regexp.MustCompile("(.+)=(.+)")
+	envRegExp = regexp.MustCompile("([^#]+.+)=(.*)$")
 )
 
 func openEnvFiles(filenames ...string) {
@@ -30,13 +30,7 @@ func openEnvFiles(filenames ...string) {
 
 func storeEnv(str string) (key, value string) {
 	match := envRegExp.FindStringSubmatch(str)
-
 	if len(match) <= 1 {
-		return
-	}
-
-	if len(match) == 2 {
-		fmt.Printf("%s doesn't has value\n", match[1])
 		return
 	}
 
@@ -71,11 +65,6 @@ func readAndStoreEnv(file *os.File) {
 func setUpEnv(str string) {
 	k, v := storeEnv(strings.TrimSpace(str))
 	if len(k) == 0 {
-		return
-	}
-	
-	if len(v) == 0 {
-		fmt.Printf("%s is Empty\n", k)
 		return
 	}
 
