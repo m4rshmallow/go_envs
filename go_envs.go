@@ -70,6 +70,15 @@ func readAndStoreEnv(file *os.File) {
 
 func setUpEnv(str string) {
 	k, v := storeEnv(strings.TrimSpace(str))
+	if len(k) == 0 {
+		return
+	}
+	
+	if len(v) == 0 {
+		fmt.Printf("%s is Empty\n", k)
+		return
+	}
+
 	exportEnv(k, v)
 }
 
