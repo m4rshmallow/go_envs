@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	Map       = Env{}
+	Map       = &Env{}
 	f         *os.File
 	e         error
 	envRegExp = regexp.MustCompile("([^#]+.+)=(.*)$")
